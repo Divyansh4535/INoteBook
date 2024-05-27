@@ -3,14 +3,20 @@
   "version": "1.0.0",
   "description": "inotebook - our note boook on cloud",
   "main": "index.js",
-  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "nodemon": "nodemon ./index.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "express": "^4.19.2",
-    "mongoose": "^8.4.0"
+    "express-validator": "^7.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^6.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
   }
 }
