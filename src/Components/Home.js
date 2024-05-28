@@ -1,19 +1,19 @@
 import React from "react";
-import Navbar from "./Navbar.js";
-import { Link } from "react-router-dom";
-import About from "./About.js";
+import Navbar from "./Navbar";
+import { Route, Routes } from "react-router-dom";
+import About from "./About";
+
 
 const Home = () => {
   return (
     <div>
-      {/* <Navbar /> */}
-      <About/>
-      <Link to={"link"}>
-        link hu bhai
-      </Link>
-      
+      <Navbar />
+      <Routes>
+        <Route exact path="/" element={<Home/>} />
+        <Route path="/about" element={<About/>} />
+      </Routes>
 
-      hlo i  m 
+      i m home
     </div>
   );
 };
