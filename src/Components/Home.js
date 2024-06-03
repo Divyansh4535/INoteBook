@@ -11,8 +11,6 @@ const Home = () => {
       <Routes>
         <Route path="/about" element={<About/>} />
       </Routes>
-
-      i m home
     </div>
   );
 };
