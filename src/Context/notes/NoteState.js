@@ -6,7 +6,7 @@ const NoteState = (props) => {
   const NotesInitial = [];
   const [Notes, setNotes] = useState(NotesInitial);
 
-  // Get a Note
+  // =>> Get a Note
   const getNotes = async () => {
     // API Call
     const respons = await fetch(`${host}/api/notes/fetchallnotes`, {
@@ -22,7 +22,7 @@ const NoteState = (props) => {
     setNotes(json);
   };
 
-  //Add a Note
+  // ==> Add a Note
   const addNote = async (Title, Description, Tags) => {
     // API Call
     const respons = await fetch(`${host}/api/notes/addnote`, {
@@ -47,7 +47,7 @@ const NoteState = (props) => {
     setNotes(Notes.concat(note));
   };
 
-  //Delete a Note
+  // ==>> Delete a Note
   const deleteNote = async (id) => {
     const respons = await fetch(`${host}/api/notes/deletenote/${id}`, {
       method: "DELETE",
@@ -67,7 +67,7 @@ const NoteState = (props) => {
     setNotes(newnote);
   };
 
-  //Edit a Note
+  // ==>>Edit a Note
   const editNote = async (id, Title, Description, Tags) => {
     // API Call
     const respons = await fetch(`${host}/api/notes/updatenote/${id}`, {

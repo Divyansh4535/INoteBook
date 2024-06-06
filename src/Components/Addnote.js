@@ -1,14 +1,17 @@
 import React, { useContext, useState } from "react";
 import noteContext from "../Context/notes/noteContext";
 
-
 const Addnote = () => {
   const context = useContext(noteContext);
   const { addNote } = context;
-  const [note, setNote] = useState({ Title: "", Description: "", Tags: "default" });
+  const [note, setNote] = useState({
+    Title: "",
+    Description: "",
+    Tags: "default",
+  });
   const handleClick = (e) => {
-    e.preventDefault()
-    addNote(note.Title,note.Description,note.Tags)
+    e.preventDefault();
+    addNote(note.Title, note.Description, note.Tags);
   };
   const onChange = (e) => {
     setNote({ ...note, [e.target.name]: e.target.value });
@@ -24,7 +27,6 @@ const Addnote = () => {
           </div>
           <form
             className="w-full mx-auto flex flex-col justify-center "
-            noValidate
           >
             <div className="flex flex-col space-y-5">
               <div className=" md:flex-row space-y-5 md:space-y-0 ">
@@ -58,13 +60,11 @@ const Addnote = () => {
                     name="Description"
                     onChange={onChange}
                     className="px-2 py-1 mb-4 flex items-center w-full appearance-none transition duration-300 ease-in-out text-heading text-sm focus:outline-none focus:ring-0 bg-white border border-gray-300 focus:shadow focus:border-heading placeholder-body"
-                    autoComplete="off"
-                    spellCheck="false"
                     rows={4}
                     placeholder="Write your Description here"
                   ></textarea>
                 </div>
-                 <div className="w-full md:w-1/2 ltr:md:ml-2.5 rtl:md:mr-2.5 ltr:lg:ml-5 rtl:lg:mr-5 mt-2 md:mt-0">
+                <div className="w-full md:w-1/2 ltr:md:ml-2.5 rtl:md:mr-2.5 ltr:lg:ml-5 rtl:lg:mr-5 mt-2 md:mt-0">
                   <label
                     htmlFor="Tags"
                     className="block text-gray-600 font-semibold text-sm leading-none mb-3 cursor-pointer"
@@ -77,7 +77,6 @@ const Addnote = () => {
                     type="Tags"
                     placeholder="Tag"
                     className="py-1 mb-4 px-2 md:px-3 w-full appearance-none transition duration-150 ease-in-out border text-input text-xs lg:text-sm font-body placeholder-body min-h-12  bg-white border-gray-300 focus:outline-none focus:border-heading h-11 md:h-8"
-                    
                   />
                 </div>
                 <div className="relative">
