@@ -1,10 +1,10 @@
 import React from "react";
+import Notes from "./Notes";
 
 const Home = () => {
   return (
-    <div>
-        i m home
-      
+    <div className="my-5 mx-auto ">
+      <Notes />
     </div>
   );
 };
